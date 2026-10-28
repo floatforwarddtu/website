@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team — DTU Float Forward</title>
+<meta name="description" content="The students behind DTU Float Forward, by season and department: Operations, Mechanical, Autonomous and Electrical.">
+<meta property="og:title" content="Team — DTU Float Forward">
+<meta property="og:description" content="The students behind DTU Float Forward, by season and department.">
+<meta property="og:image" content="https://dtufloatforward.dk/images/boat/share.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="logo" href="index.html"><img src="images/logos/floatforward.png" alt="DTU Float Forward" width="223" height="97"></a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="team.html" aria-current="page">Team</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="dtu-logo" href="https://www.dtu.dk/" target="_blank" rel="noopener"><img src="images/logos/dtu.png" alt="DTU — Technical University of Denmark"></a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero--page hero--team">
+    <div class="hero__img" id="team-hero"></div>
+    <div class="hero__content wrap" style="text-align:center;width:100%">
+      <h1 style="max-width:none;margin:0 auto">TEAM</h1>
+      <div class="season-switch">
+        <button id="prev" type="button" aria-label="Previous season">&#8249;</button>
+        <span id="season">2026/2027</span>
+        <button id="next" type="button" aria-label="Next season">&#8250;</button>
+      </div>
+      <span class="badge" id="season-badge">CURRENT TEAM</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div id="departments" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section section--sea">
+    <div class="wrap" style="text-align:center">
+      <h2>Join the team</h2>
+      <p class="lead" style="margin:0 auto 24px">We recruit DTU students every year across all four departments. No previous racing experience needed — just curiosity and commitment.</p>
+      <a class="btn" href="contact.html">Write to us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h4>Float Forward</h4>
+        <p style="margin:0">DTU 2800 Kongens Lyngby, Denmark</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:floatforwarddtu@gmail.com">floatforwarddtu@gmail.com</a></li>
+          <li><a href="tel:+4571361649">+45 71 36 16 49</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://instagram.com/floatforward.dtu/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com/company/dtu-float-forward/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://facebook.com/people/Float-Forward-DTU/61565667403670/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> DTU Float Forward</span>
+      <a href="https://construct.dtu.dk/" target="_blank" rel="noopener">DTU Construct</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data/team.js"></script>
+<script src="assets/js/team.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
