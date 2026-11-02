@@ -122,7 +122,7 @@ p { margin: 0 0 1.1em; }
   color: var(--ink); text-decoration: none;
   display: flex; align-items: center; gap: 10px;
 }
-.logo img { height: 46px; width: auto; }
+.logo img { height: 64px; width: auto; }
 
 /* Logo de DTU, a la derecha de los enlaces */
 .dtu-logo { display: flex; align-items: center; margin-left: 28px; padding-left: 28px; border-left: 1px solid var(--line); }
@@ -146,7 +146,7 @@ p { margin: 0 0 1.1em; }
   .nav-toggle { display: block; order: 3; margin-left: 16px; }
   .dtu-logo { margin-left: auto; padding-left: 0; border-left: 0; }
   .dtu-logo img { height: 34px; }
-  .logo img { height: 40px; }
+  .logo img { height: 52px; }
   .nav {
     position: absolute; top: var(--header-h); left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
@@ -275,6 +275,17 @@ p { margin: 0 0 1.1em; }
 .logos img { max-height: 62px; width: auto; object-fit: contain; transition: transform 0.2s; }
 .logos a:hover img { transform: scale(1.06); }   /* indica que el logo es un enlace */
 
+/* Logo de la competición en "About us" (portada). El logo es blanco,
+   por eso va sobre un recuadro azul marino. Es un enlace a su web. */
+.comp-logo {
+  display: inline-block; margin: 8px 0 4px;
+  background: var(--sea); border-radius: var(--radius);
+  padding: 18px 22px; transition: transform 0.2s;
+}
+.comp-logo img { display: block; height: 72px; width: auto; }
+.comp-logo:hover { transform: translateY(-3px); }
+@media (max-width: 640px) { .comp-logo img { height: 60px; } }
+
 /* ---------------- Tarjeta destacada con dos caras (portada) ---------------- */
 .highlight { position: relative; background-size: cover; background-position: center; background-color: var(--sea); }
 .highlight::before { content: ""; position: absolute; inset: 0; background: rgba(13,43,69,0.35); }
@@ -309,6 +320,10 @@ p { margin: 0 0 1.1em; }
 @media (max-width: 760px) {
   .flip__front, .flip__back { grid-template-columns: 1fr; }
   .flip__back img { display: none; }
+  /* En una columna, la foto toma su altura de aspect-ratio y no del hueco
+     que deja la otra cara: así no se estira ni se recorta en el móvil */
+  .flip__face { align-content: center; }
+  .flip img { height: auto; }
 }
 
 /* ---------------- Noticias ---------------- */
