@@ -7,6 +7,8 @@
 
      season    : texto del curso, p. ej. "2026/2027"
      teamPhoto : foto grande de todo el equipo
+     photoPosition : opcional. Qué parte de la foto se ve en la cabecera:
+                     "0%" arriba, "100%" abajo. Sin esta línea, "45%".
      departments:
         name        : nombre del departamento
         description : texto opcional bajo el título
@@ -67,6 +69,7 @@ const TEAM = [
   {
     season: "2024/2025",
     teamPhoto: "images/team/2024-2025/group.jpg",
+    photoPosition: "8%",
     departments: [
       {
         name: "Operations",

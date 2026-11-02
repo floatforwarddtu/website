@@ -186,9 +186,10 @@ p { margin: 0 0 1.1em; }
 
 /* Cabecera de Team: la foto de grupo ocupa todo el ancho y la altura crece
    con el ancho de la pantalla, con un tope de 600px. La foto se recorta
-   por arriba y por abajo; center 45% centra la zona de las caras. */
+   por arriba y por abajo; center 45% centra la zona de las caras.
+   Cada curso puede cambiarlo con photoPosition en team.js (--photo-pos). */
 .hero--team { min-height: clamp(360px, 36vw, 600px); align-items: flex-end; }
-.hero--team .hero__img { background-image: var(--photo); background-size: cover; background-position: center 45%; }
+.hero--team .hero__img { background-image: var(--photo); background-size: cover; background-position: center var(--photo-pos, 45%); }
 /* Velo mucho más suave: solo oscurece la parte de abajo, donde va el texto */
 .hero--team::after { background: linear-gradient(180deg, rgba(8,20,28,0) 45%, rgba(8,20,28,0.55)); }
 .hero--team .hero__content { padding-top: 0; padding-bottom: 28px; }

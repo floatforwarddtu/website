@@ -79,7 +79,11 @@
     var pre = new Image();
     var shown = i;  // si mientras carga se cambia de curso, esta foto ya no se pone
     // La foto va en la variable --photo: el CSS la usa entera y, detrás, desenfocada
-    pre.onload = function () { if (shown === i) hero.style.setProperty("--photo", "url('" + pre.src + "')"); };
+    pre.onload = function () {
+      if (shown !== i) return;
+      hero.style.setProperty("--photo", "url('" + pre.src + "')");
+      hero.style.setProperty("--photo-pos", s.photoPosition || "45%");
+    };
     pre.onerror = function () { if (pre.src.indexOf(fallback) === -1) pre.src = fallback; };
     pre.src = s.teamPhoto || fallback;
     list.innerHTML = "";
