@@ -69,7 +69,7 @@ const TEAM = [
   {
     season: "2024/2025",
     teamPhoto: "images/team/2024-2025/group.jpg",
-    photoPosition: "8%",
+    photoPosition: "20%",
     departments: [
       {
         name: "Operations",

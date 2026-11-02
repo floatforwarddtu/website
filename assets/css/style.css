@@ -277,8 +277,10 @@ p { margin: 0 0 1.1em; }
 
 /* Logo de la competición en "About us" (portada). El logo es blanco,
    por eso va sobre un recuadro azul marino. Es un enlace a su web. */
+.comp-row { align-items: center; margin-top: 12px; }
+.comp-row p { margin: 0; }
 .comp-logo {
-  display: inline-block; margin: 8px 0 4px;
+  display: inline-block;
   background: var(--sea); border-radius: var(--radius);
   padding: 18px 22px; transition: transform 0.2s;
 }
