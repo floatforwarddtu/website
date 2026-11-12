@@ -14,7 +14,8 @@
         description : texto opcional bajo el título
         photo       : foto de grupo del departamento
         feature     : opcional. Cuadro de texto a la derecha de la foto,
-                      con title (título) y text (párrafo)
+                      con title (título) y text (párrafo), o con people:
+                      una lista de { name, role } que se ve en letra grande
 
    Las rutas de las fotos ya están puestas. Basta con subir cada foto
    a su carpeta con ese nombre exacto (minúsculas, sin acentos ni
@@ -28,6 +29,17 @@ const TEAM = [
     teamPhoto: "images/team/2026-2027/group.jpg",
     departments: [
       {
+        name: "Team Leaders",
+        description: "",
+        photo: "images/team/2026-2027/team-leaders.jpg",
+        feature: {
+          people: [
+            { name: "Maria", role: "Team Manager" },
+            { name: "Arian", role: "Engineering Lead" }
+          ]
+        }
+      },
+      {
         name: "Operations",
         description: "",
         photo: "images/team/2026-2027/operations.jpg",
@@ -38,8 +50,12 @@ const TEAM = [
       },
       {
         name: "Mechanical",
-        description: "Focused on elevating the boat's performance by reducing weight, increasing power and improving manoeuvrability — from the cockpit redesign to a custom electric motor and a new capstan-drive steering system.",
-        photo: "images/team/2026-2027/mechanical.jpg"
+        description: "",
+        photo: "images/team/2026-2027/mechanical.jpg",
+        feature: {
+          title: "The Mechanical Team of DTU Float Forward!",
+          text: "The Mechanical team is where engineering ideas take physical shape. Its mission is to improve the boat’s performance by making every component work smarter, lighter, and more efficiently. From developing the propulsion drivetrain and refining the propeller and gearbox to redesigning the steering system, the team works to achieve greater power, precision, and reliability on the water. It also tackles structural analysis and reinforcement, improves the rudder mount and its watertightness, and explores new cockpit designs that balance weight reduction, aerodynamics, and functionality. Through hands-on design, testing, and continuous improvement, the Mechanical team transforms concepts into robust solutions that help push the boat’s performance further."
+        }
       },
       {
         name: "Autonomous",
@@ -52,8 +68,12 @@ const TEAM = [
       },
       {
         name: "Electrical",
-        description: "Communication systems and telemetry, plus the electrical powertrain: motor, inverter, battery and safety systems across the full high-voltage development cycle.",
-        photo: "images/team/2026-2027/electrical.jpg"
+        description: "",
+        photo: "images/team/2026-2027/electrical.jpg",
+        feature: {
+          title: "The Electrical Team of DTU Float Forward!",
+          text: "The Electrical team powers the technology behind the boat, ensuring that its electrical and electronic systems work together as one reliable, high-performance platform. Its work spans motor electronics, inverter optimisation, battery-pack development, cooling systems, and improvements to overall reliability. Beyond the powertrain, the team designs onboard electronics and PCBs, develops firmware, integrates sensors, and builds the communication and telemetry systems needed to collect, transmit, and visualise data. It also oversees electrical system integration, wiring, and power budgeting, while exploring solar technologies and modelling their potential contribution to the boat’s performance. By combining hardware, software, and system-level engineering, the Electrical team helps deliver the power, monitoring, and reliability needed to perform on the water."
+        }
       }
     ]
   },

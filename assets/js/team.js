@@ -57,11 +57,32 @@
       row.className = "dept__feature";
       var box = document.createElement("div");
       box.className = "dept__box";
-      var bt = document.createElement("h4");
-      bt.textContent = d.feature.title;
-      var bp = document.createElement("p");
-      bp.textContent = d.feature.text;
-      box.appendChild(bt); box.appendChild(bp);
+      if (d.feature.title) {
+        var bt = document.createElement("h4");
+        bt.textContent = d.feature.title;
+        box.appendChild(bt);
+      }
+      if (d.feature.text) {
+        var bp = document.createElement("p");
+        bp.textContent = d.feature.text;
+        box.appendChild(bp);
+      }
+      // Con "people", nombres en grande y el cargo debajo
+      if (d.feature.people) {
+        box.classList.add("dept__box--people");
+        d.feature.people.forEach(function (p) {
+          var item = document.createElement("div");
+          item.className = "dept__person";
+          var pn = document.createElement("span");
+          pn.className = "dept__person-name";
+          pn.textContent = p.name;
+          var pr = document.createElement("span");
+          pr.className = "dept__person-role";
+          pr.textContent = p.role;
+          item.appendChild(pn); item.appendChild(pr);
+          box.appendChild(item);
+        });
+      }
       row.appendChild(media); row.appendChild(box);
       sec.appendChild(row);
     } else {
