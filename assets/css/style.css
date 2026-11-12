@@ -269,11 +269,11 @@ button.btn { border: 0; cursor: pointer; font: inherit; font-weight: 600; }
 .dept__box h4 { font-family: "Archivo Black", sans-serif; font-size: 1.15rem; line-height: 1.25; margin: 0 0 12px; color: var(--red); }
 .dept__box p { margin: 0; }
 /* Cuadro con nombres (campo "people"): nombre grande y cargo en rojo debajo */
-.dept__box--people { align-self: stretch; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding: 32px 36px; }
+.dept__box--people { align-self: stretch; display: flex; flex-direction: column; justify-content: center; gap: 22px; padding: 28px 32px; }
 .dept__person { display: flex; flex-direction: column; gap: 6px; }
-.dept__person-name { font-family: "Archivo Black", sans-serif; font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1; color: var(--ink); }
+.dept__person-name { font-family: "Archivo Black", sans-serif; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.1; color: var(--ink); }
 .dept__person-role { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); }
-.dept__person + .dept__person { padding-top: 28px; border-top: 1px solid var(--line); }
+.dept__person + .dept__person { padding-top: 22px; border-top: 1px solid var(--line); }
 @media (max-width: 760px) { .dept__feature { grid-template-columns: 1fr; } }
 
 /* ---------------- Patrocinadores ---------------- */
