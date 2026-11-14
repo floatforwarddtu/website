@@ -289,6 +289,8 @@ button.btn { border: 0; cursor: pointer; font: inherit; font-weight: 600; }
 .logos a, .logos div { display: flex; align-items: center; justify-content: center; min-height: 72px; }
 .logos img { max-height: 62px; width: auto; object-fit: contain; transition: transform 0.2s; }
 .logos a:hover img { transform: scale(1.06); }   /* indica que el logo es un enlace */
+/* Logos casi cuadrados: algo más altos para que su texto se lea igual que el resto */
+.logos img.logo-square { max-height: 92px; }
 
 /* Logo de la competición en "About us" (portada). El logo es blanco,
    por eso va sobre un recuadro azul marino. Es un enlace a su web. */
